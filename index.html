@@ -1,9 +1,416 @@
-<html>
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Design System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&family=Fira+Code&display=swap"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>My Design System</h1>
+        <p>A comprehensive collection of colors, fonts, and styles for building beautiful websites</p>
+      </header>
 
-<body>
-  <h1>Tomide O</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+      <!-- ========================================
+           COLOR PALETTE SECTION
+           Display all color swatches with hex codes and CSS variables
+           ======================================== -->
+      <section class="section">
+        <h2 class="section-title">Color Palette</h2>
 
+        <h3>Primary Colors</h3>
+        <p style="color: var(--color-neutral-600); margin-bottom: var(--spacing-lg);">
+          <strong>Use for:</strong> Primary buttons, links, key UI elements, and main CTAs. This is your main brand color.
+        </p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-primary);"></div>
+            <div class="color-info">
+              <div class="color-name">Primary</div>
+              <div class="color-value">#2563eb</div>
+              <div class="color-var">--color-primary</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-primary-light);"></div>
+            <div class="color-info">
+              <div class="color-name">Primary Light</div>
+              <div class="color-value">#60a5fa</div>
+              <div class="color-var">--color-primary-light</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-primary-dark);"></div>
+            <div class="color-info">
+              <div class="color-name">Primary Dark</div>
+              <div class="color-value">#1e40af</div>
+              <div class="color-var">--color-primary-dark</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Secondary Colors</h3>
+        <p style="color: var(--color-neutral-600); margin-bottom: var(--spacing-lg);">
+          <strong>Use for:</strong> Secondary buttons, alternate highlights, and complementary UI elements. Supports the primary color.
+        </p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-secondary);"></div>
+            <div class="color-info">
+              <div class="color-name">Secondary</div>
+              <div class="color-value">#7c3aed</div>
+              <div class="color-var">--color-secondary</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-secondary-light);"></div>
+            <div class="color-info">
+              <div class="color-name">Secondary Light</div>
+              <div class="color-value">#a78bfa</div>
+              <div class="color-var">--color-secondary-light</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-secondary-dark);"></div>
+            <div class="color-info">
+              <div class="color-name">Secondary Dark</div>
+              <div class="color-value">#5b21b6</div>
+              <div class="color-var">--color-secondary-dark</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Accent Colors</h3>
+        <p style="color: var(--color-neutral-600); margin-bottom: var(--spacing-lg);">
+          <strong>Use for:</strong> Drawing attention to special features, promotions, important highlights, and badges.
+        </p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-accent);"></div>
+            <div class="color-info">
+              <div class="color-name">Accent</div>
+              <div class="color-value">#f59e0b</div>
+              <div class="color-var">--color-accent</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-accent-light);"></div>
+            <div class="color-info">
+              <div class="color-name">Accent Light</div>
+              <div class="color-value">#fbbf24</div>
+              <div class="color-var">--color-accent-light</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-accent-dark);"></div>
+            <div class="color-info">
+              <div class="color-name">Accent Dark</div>
+              <div class="color-value">#d97706</div>
+              <div class="color-var">--color-accent-dark</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Neutral Colors</h3>
+        <p style="color: var(--color-neutral-600); margin-bottom: var(--spacing-lg);">
+          <strong>Use for:</strong> Body text, headings, backgrounds, dividers, borders, and disabled states. The foundation of your UI.
+        </p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-neutral-100);"></div>
+            <div class="color-info">
+              <div class="color-name">Neutral 100</div>
+              <div class="color-value">#f3f4f6</div>
+              <div class="color-var">--color-neutral-100</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-neutral-300);"></div>
+            <div class="color-info">
+              <div class="color-name">Neutral 300</div>
+              <div class="color-value">#d1d5db</div>
+              <div class="color-var">--color-neutral-300</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-neutral-500);"></div>
+            <div class="color-info">
+              <div class="color-name">Neutral 500</div>
+              <div class="color-value">#6b7280</div>
+              <div class="color-var">--color-neutral-500</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-neutral-700);"></div>
+            <div class="color-info">
+              <div class="color-name">Neutral 700</div>
+              <div class="color-value">#374151</div>
+              <div class="color-var">--color-neutral-700</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-neutral-900);"></div>
+            <div class="color-info">
+              <div class="color-name">Neutral 900</div>
+              <div class="color-value">#111827</div>
+              <div class="color-var">--color-neutral-900</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Semantic Colors</h3>
+        <p style="color: var(--color-neutral-600); margin-bottom: var(--spacing-lg);">
+          <strong>Use for:</strong> Success messages, warnings, errors, and informational alerts. Provides user feedback.
+        </p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-success);"></div>
+            <div class="color-info">
+              <div class="color-name">Success</div>
+              <div class="color-value">#10b981</div>
+              <div class="color-var">--color-success</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-warning);"></div>
+            <div class="color-info">
+              <div class="color-name">Warning</div>
+              <div class="color-value">#f59e0b</div>
+              <div class="color-var">--color-warning</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-error);"></div>
+            <div class="color-info">
+              <div class="color-name">Error</div>
+              <div class="color-value">#ef4444</div>
+              <div class="color-var">--color-error</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--color-info);"></div>
+            <div class="color-info">
+              <div class="color-name">Info</div>
+              <div class="color-value">#3b82f6</div>
+              <div class="color-var">--color-info</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+           TYPOGRAPHY SECTION
+           Font families, sizes, weights, and text styles
+           ======================================== -->
+      <section class="section">
+        <h2 class="section-title">Typography</h2>
+
+        <h3>CSS Style Rules Reference</h3>
+        <div class="font-showcase" style="background-color: var(--color-neutral-100);">
+          <h4 style="margin-bottom: var(--spacing-lg);">Common Element Styles</h4>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <strong style="color: var(--color-primary);">h1 Styles:</strong>
+            <pre style="margin-top: var(--spacing-sm); font-family: var(--font-mono); font-size: var(--font-size-sm); line-height: 1.6; background: white; padding: var(--spacing-md); border-radius: var(--radius-sm); overflow-x: auto;">font-family: var(--font-heading);
+font-size: var(--font-size-5xl);    /* 48px */
+font-weight: var(--font-weight-bold);    /* 700 */
+line-height: var(--line-height-tight);    /* 1.25 */
+color: var(--color-neutral-900);
+margin-bottom: var(--spacing-md);    /* 16px */</pre>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <strong style="color: var(--color-primary);">h2 Styles:</strong>
+            <pre style="margin-top: var(--spacing-sm); font-family: var(--font-mono); font-size: var(--font-size-sm); line-height: 1.6; background: white; padding: var(--spacing-md); border-radius: var(--radius-sm); overflow-x: auto;">font-family: var(--font-heading);
+font-size: var(--font-size-4xl);    /* 36px */
+font-weight: var(--font-weight-bold);    /* 700 */
+line-height: var(--line-height-tight);    /* 1.25 */
+color: var(--color-neutral-900);
+margin-bottom: var(--spacing-md);    /* 16px */</pre>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <strong style="color: var(--color-primary);">p (Paragraph) Styles:</strong>
+            <pre style="margin-top: var(--spacing-sm); font-family: var(--font-mono); font-size: var(--font-size-sm); line-height: 1.6; background: white; padding: var(--spacing-md); border-radius: var(--radius-sm); overflow-x: auto;">font-family: var(--font-primary);
+font-size: var(--font-size-base);    /* 16px */
+font-weight: var(--font-weight-normal);    /* 400 */
+line-height: var(--line-height-normal);    /* 1.5 */
+color: var(--color-neutral-700);
+margin-bottom: var(--spacing-md);    /* 16px */</pre>
+          </div>
+
+          <div>
+            <strong style="color: var(--color-primary);">a (Link) Styles:</strong>
+            <pre style="margin-top: var(--spacing-sm); font-family: var(--font-mono); font-size: var(--font-size-sm); line-height: 1.6; background: white; padding: var(--spacing-md); border-radius: var(--radius-sm); overflow-x: auto;">color: var(--color-primary);
+text-decoration: none;
+transition: color 0.2s ease;
+
+/* Hover state */
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}</pre>
+          </div>
+        </div>
+
+        <h3>Font Families</h3>
+        <div class="font-showcase">
+          <div class="font-family-display" style="font-family: var(--font-primary);">
+            Inter - Primary Font
+          </div>
+          <div class="font-details">font-family: var(--font-primary)</div>
+          <p style="font-family: var(--font-primary);">
+            The quick brown fox jumps over the lazy dog. ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
+          </p>
+        </div>
+
+        <div class="font-showcase">
+          <div class="font-family-display" style="font-family: var(--font-heading);">
+            Poppins - Heading Font
+          </div>
+          <div class="font-details">font-family: var(--font-heading)</div>
+          <p style="font-family: var(--font-heading);">
+            The quick brown fox jumps over the lazy dog. ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
+          </p>
+        </div>
+
+        <div class="font-showcase">
+          <div class="font-family-display" style="font-family: var(--font-mono);">
+            Fira Code - Monospace
+          </div>
+          <div class="font-details">font-family: var(--font-mono)</div>
+          <p style="font-family: var(--font-mono);">
+            The quick brown fox jumps over the lazy dog. ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
+          </p>
+        </div>
+
+        <h3>Heading Styles</h3>
+        <div class="font-showcase">
+          <h1>Heading 1 - 48px</h1>
+          <h2>Heading 2 - 36px</h2>
+          <h3>Heading 3 - 30px</h3>
+          <h4>Heading 4 - 24px</h4>
+          <h5>Heading 5 - 20px</h5>
+          <h6>Heading 6 - 18px</h6>
+        </div>
+
+        <h3>Font Sizes</h3>
+        <div class="font-showcase">
+          <p class="text-xs">Extra Small - 12px (var(--font-size-xs))</p>
+          <p class="text-sm">Small - 14px (var(--font-size-sm))</p>
+          <p class="text-base">Base - 16px (var(--font-size-base))</p>
+          <p class="text-lg">Large - 18px (var(--font-size-lg))</p>
+          <p class="text-xl">Extra Large - 20px (var(--font-size-xl))</p>
+        </div>
+
+        <h3>Font Weights</h3>
+        <div class="font-showcase">
+          <p class="font-light">Light - 300 (var(--font-weight-light))</p>
+          <p class="font-normal">Normal - 400 (var(--font-weight-normal))</p>
+          <p class="font-medium">Medium - 500 (var(--font-weight-medium))</p>
+          <p class="font-semibold">Semibold - 600 (var(--font-weight-semibold))</p>
+          <p class="font-bold">Bold - 700 (var(--font-weight-bold))</p>
+        </div>
+
+        <h3>Text Styles</h3>
+        <div class="font-showcase">
+          <p>This is a <strong>bold text</strong> example.</p>
+          <p>This is an <em>italic text</em> example.</p>
+          <p>This is a <a href="#">link text</a> example.</p>
+          <p>This is an <code>inline code</code> example.</p>
+        </div>
+      </section>
+
+      <!-- ========================================
+           BUTTONS & COMPONENTS SECTION
+           Reusable button styles and interactive components
+           ======================================== -->
+      <section class="section">
+        <h2 class="section-title">Buttons</h2>
+        <div class="button-grid">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-secondary">Secondary Button</button>
+          <button class="btn btn-outline">Outline Button</button>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SPACING SECTION
+           Consistent spacing scale for margins, padding, and gaps
+           ======================================== -->
+      <section class="section">
+        <h2 class="section-title">Spacing Scale</h2>
+        <div class="font-showcase">
+          <p><code>--spacing-xs: 4px</code></p>
+          <p><code>--spacing-sm: 8px</code></p>
+          <p><code>--spacing-md: 16px</code></p>
+          <p><code>--spacing-lg: 24px</code></p>
+          <p><code>--spacing-xl: 32px</code></p>
+          <p><code>--spacing-2xl: 48px</code></p>
+          <p><code>--spacing-3xl: 64px</code></p>
+        </div>
+      </section>
+
+      <!-- ========================================
+           BORDER RADIUS SECTION
+           Corner rounding options for UI elements
+           ======================================== -->
+      <section class="section">
+        <h2 class="section-title">Border Radius</h2>
+        <div class="color-grid">
+          <div class="font-showcase"
+               style="border-radius: var(--radius-sm); background: var(--color-primary); color: white; text-align: center;">
+            Small - 4px<br><code style="background: rgba(255,255,255,0.2); color: white;">--radius-sm</code>
+          </div>
+          <div class="font-showcase"
+               style="border-radius: var(--radius-md); background: var(--color-secondary); color: white; text-align: center;">
+            Medium - 8px<br><code style="background: rgba(255,255,255,0.2); color: white;">--radius-md</code>
+          </div>
+          <div class="font-showcase"
+               style="border-radius: var(--radius-lg); background: var(--color-accent); color: white; text-align: center;">
+            Large - 12px<br><code style="background: rgba(255,255,255,0.2); color: white;">--radius-lg</code>
+          </div>
+          <div class="font-showcase"
+               style="border-radius: var(--radius-xl); background: var(--color-success); color: white; text-align: center;">
+            Extra Large - 16px<br><code style="background: rgba(255,255,255,0.2); color: white;">--radius-xl</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SHADOWS SECTION
+           Box shadow options for depth and elevation
+           ======================================== -->
+      <section class="section">
+        <h2 class="section-title">Shadows</h2>
+        <div class="color-grid">
+          <div class="font-showcase" style="box-shadow: var(--shadow-sm);">
+            <strong>Small Shadow</strong><br>
+            <code>--shadow-sm</code>
+          </div>
+          <div class="font-showcase" style="box-shadow: var(--shadow-md);">
+            <strong>Medium Shadow</strong><br>
+            <code>--shadow-md</code>
+          </div>
+          <div class="font-showcase" style="box-shadow: var(--shadow-lg);">
+            <strong>Large Shadow</strong><br>
+            <code>--shadow-lg</code>
+          </div>
+          <div class="font-showcase" style="box-shadow: var(--shadow-xl);">
+            <strong>Extra Large Shadow</strong><br>
+            <code>--shadow-xl</code>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
